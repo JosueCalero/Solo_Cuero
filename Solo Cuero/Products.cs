@@ -31,7 +31,8 @@ namespace Solo_Cuero
 
          public void MostrarProductos ()
         {
-            dgv_Products.DataSource = objetoCN.MostrarProd();
+            DGV_Facturar.DataSource = objetoCN.MostrarProd();
+            DGV_Facturar.Columns[0].Visible = false;
 
         }
 

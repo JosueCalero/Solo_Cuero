@@ -126,6 +126,17 @@ namespace Solo_Cuero
         {
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Facturar());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new InventarioP());
+            
+        }
     }
     }
 

@@ -9,7 +9,7 @@ namespace Capa_Datos
 {
     internal class CD_Conexion
     {
-        private SqlConnection Conexion = new SqlConnection("server=DESKTOP-0T2MQSL;DataBase=Solo_Cueros;Integrated security=true");
+        private SqlConnection Conexion = new SqlConnection("server=(local);DataBase=Solo_Cueros;Integrated security=true");
 
         public SqlConnection abrirConexion()
         {

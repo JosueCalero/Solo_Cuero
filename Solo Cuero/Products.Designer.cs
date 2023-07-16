@@ -29,36 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Products));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_table_container = new System.Windows.Forms.Panel();
             this.pb_close = new System.Windows.Forms.PictureBox();
             this.pnl_topPanel = new System.Windows.Forms.Panel();
-            this.btn_insert = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.dgv_Products = new System.Windows.Forms.DataGridView();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_insert = new System.Windows.Forms.Button();
+            this.DGV_Facturar = new System.Windows.Forms.DataGridView();
             this.pnl_table_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_close)).BeginInit();
             this.pnl_topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Facturar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_table_container
             // 
-            this.pnl_table_container.Controls.Add(this.dgv_Products);
+            this.pnl_table_container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
+            this.pnl_table_container.Controls.Add(this.DGV_Facturar);
             this.pnl_table_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_table_container.Location = new System.Drawing.Point(0, 88);
+            this.pnl_table_container.Location = new System.Drawing.Point(0, 72);
+            this.pnl_table_container.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_table_container.Name = "pnl_table_container";
-            this.pnl_table_container.Size = new System.Drawing.Size(1287, 525);
+            this.pnl_table_container.Size = new System.Drawing.Size(965, 426);
             this.pnl_table_container.TabIndex = 2;
             // 
             // pb_close
             // 
             this.pb_close.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pb_close.Image = ((System.Drawing.Image)(resources.GetObject("pb_close.Image")));
-            this.pb_close.Location = new System.Drawing.Point(1235, 30);
+            this.pb_close.Location = new System.Drawing.Point(926, 24);
+            this.pb_close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_close.Name = "pb_close";
-            this.pb_close.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.pb_close.Size = new System.Drawing.Size(40, 25);
+            this.pb_close.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.pb_close.Size = new System.Drawing.Size(30, 20);
             this.pb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_close.TabIndex = 2;
             this.pb_close.TabStop = false;
@@ -73,36 +81,10 @@
             this.pnl_topPanel.Controls.Add(this.pb_close);
             this.pnl_topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_topPanel.Location = new System.Drawing.Point(0, 0);
+            this.pnl_topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_topPanel.Name = "pnl_topPanel";
-            this.pnl_topPanel.Size = new System.Drawing.Size(1287, 88);
+            this.pnl_topPanel.Size = new System.Drawing.Size(965, 72);
             this.pnl_topPanel.TabIndex = 1;
-            // 
-            // btn_insert
-            // 
-            this.btn_insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(56)))), ((int)(((byte)(33)))));
-            this.btn_insert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_insert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
-            this.btn_insert.Location = new System.Drawing.Point(26, 12);
-            this.btn_insert.Name = "btn_insert";
-            this.btn_insert.Size = new System.Drawing.Size(196, 62);
-            this.btn_insert.TabIndex = 3;
-            this.btn_insert.Text = "Agregar";
-            this.btn_insert.UseVisualStyleBackColor = false;
-            this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(56)))), ((int)(((byte)(33)))));
-            this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
-            this.btn_Edit.Location = new System.Drawing.Point(238, 12);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(196, 62);
-            this.btn_Edit.TabIndex = 4;
-            this.btn_Edit.Text = "Editar";
-            this.btn_Edit.UseVisualStyleBackColor = false;
             // 
             // btn_Delete
             // 
@@ -110,45 +92,123 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
-            this.btn_Delete.Location = new System.Drawing.Point(451, 12);
+            this.btn_Delete.Location = new System.Drawing.Point(338, 10);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(196, 62);
+            this.btn_Delete.Size = new System.Drawing.Size(147, 50);
             this.btn_Delete.TabIndex = 5;
             this.btn_Delete.Text = "Eliminar";
             this.btn_Delete.UseVisualStyleBackColor = false;
             // 
-            // dgv_Products
+            // btn_Edit
             // 
-            this.dgv_Products.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
-            this.dgv_Products.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Products.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.dgv_Products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Products.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Products.Name = "dgv_Products";
-            this.dgv_Products.RowHeadersWidth = 51;
-            this.dgv_Products.RowTemplate.Height = 24;
-            this.dgv_Products.Size = new System.Drawing.Size(1287, 525);
-            this.dgv_Products.TabIndex = 1;
-            this.dgv_Products.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Products_CellContentClick);
+            this.btn_Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(56)))), ((int)(((byte)(33)))));
+            this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
+            this.btn_Edit.Location = new System.Drawing.Point(178, 10);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(147, 50);
+            this.btn_Edit.TabIndex = 4;
+            this.btn_Edit.Text = "Editar";
+            this.btn_Edit.UseVisualStyleBackColor = false;
+            // 
+            // btn_insert
+            // 
+            this.btn_insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(56)))), ((int)(((byte)(33)))));
+            this.btn_insert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_insert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
+            this.btn_insert.Location = new System.Drawing.Point(20, 10);
+            this.btn_insert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_insert.Name = "btn_insert";
+            this.btn_insert.Size = new System.Drawing.Size(147, 50);
+            this.btn_insert.TabIndex = 3;
+            this.btn_insert.Text = "Agregar";
+            this.btn_insert.UseVisualStyleBackColor = false;
+            this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
+            // 
+            // DGV_Facturar
+            // 
+            this.DGV_Facturar.AllowUserToAddRows = false;
+            this.DGV_Facturar.AllowUserToDeleteRows = false;
+            this.DGV_Facturar.AllowUserToResizeColumns = false;
+            this.DGV_Facturar.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_Facturar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Facturar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Facturar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Facturar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGV_Facturar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(203)))), ((int)(((byte)(163)))));
+            this.DGV_Facturar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGV_Facturar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.DGV_Facturar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Facturar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_Facturar.ColumnHeadersHeight = 30;
+            this.DGV_Facturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Facturar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_Facturar.EnableHeadersVisualStyles = false;
+            this.DGV_Facturar.GridColor = System.Drawing.Color.Black;
+            this.DGV_Facturar.Location = new System.Drawing.Point(20, 22);
+            this.DGV_Facturar.MultiSelect = false;
+            this.DGV_Facturar.Name = "DGV_Facturar";
+            this.DGV_Facturar.ReadOnly = true;
+            this.DGV_Facturar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Facturar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGV_Facturar.RowHeadersVisible = false;
+            this.DGV_Facturar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_Facturar.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_Facturar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Facturar.Size = new System.Drawing.Size(923, 381);
+            this.DGV_Facturar.TabIndex = 66;
+            this.DGV_Facturar.TabStop = false;
             // 
             // frm_Products
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Solo_Cuero.Properties.Resources.Solo_cuero_Logo;
-            this.ClientSize = new System.Drawing.Size(1287, 613);
+            this.ClientSize = new System.Drawing.Size(965, 498);
             this.Controls.Add(this.pnl_table_container);
             this.Controls.Add(this.pnl_topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_Products";
             this.Text = "Products";
             this.Load += new System.EventHandler(this.Products_Load);
             this.pnl_table_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_close)).EndInit();
             this.pnl_topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Facturar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,6 +220,6 @@
         private System.Windows.Forms.Button btn_insert;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Edit;
-        public System.Windows.Forms.DataGridView dgv_Products;
+        private System.Windows.Forms.DataGridView DGV_Facturar;
     }
 }
